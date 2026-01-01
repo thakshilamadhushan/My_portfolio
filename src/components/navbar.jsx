@@ -24,11 +24,11 @@ export default function Navbar() {
           
           {/* Logo */}
           <Typography
-            variant="h6"
+            
             fontWeight="bold"
-            sx={{ cursor: "none" }}
+            sx={{ cursor: "none", fontSize: {xs:17 , sm: 20, md: 22}}}
           >
-            Thakshila<span style={{ color: "#1976d2" }}>.</span>
+            Thakshila<span style={{ color: "#1976d2" }}>Madhushan</span>
           </Typography>
 
           {/* Desktop Menu */}
@@ -51,7 +51,7 @@ export default function Navbar() {
           {/* Mobile Menu Button */}
           <IconButton
             edge="end"
-            sx={{ display: { md: "none" } }}
+            sx={{ display: { md: "none" }, color: "white" }}
             onClick={handleDrawerToggle}
           >
             <MenuIcon />
