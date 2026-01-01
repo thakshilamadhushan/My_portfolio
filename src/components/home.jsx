@@ -7,16 +7,14 @@ export default function home(){
     return(
         <>
         <BackgroundVideo/>
-        <Box sx={{
-            scrollMarginTop: "50px",
-            paddingY: 5,
-        }}>
+        <Box >
 
-        <Box display={"flex"} flexDirection={{xs:"column", md: "row"}} alignContent={"center"} justifyContent={"center"} alignItems={"center"} gap={{md:20}}>
+        <Box display={"flex"} flexDirection={{xs:"column-reverse", md: "row"}} alignContent={"center"} justifyContent={"center"} alignItems={"center"} gap={{md:20}}>
             
             <Box textAlign={"left"}>
-                <h3>Hi, I am Thakshila Madhushan</h3>
-                <h1>Fullstack Developer</h1>
+                <h2>Hi, I am</h2>
+                <h1>Thakshila Madhushan Ranjith</h1>
+                <h3>Full-Stack Developer | Web Developer | Software • Electronics • IoT | Nature Photographer</h3>
                 <button> Download CV</button>
             </Box>
             <Box

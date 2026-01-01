@@ -2,7 +2,7 @@ import { AppBar, Toolbar, Typography, Button, IconButton, Drawer, List, ListItem
 import MenuIcon from "@mui/icons-material/Menu";
 import { useState } from "react";
 
-const navItems = ["Home", "About me", "Journey", "Skills", "Projects", "Lense", "Contact"];
+const navItems = ["Home", "About", "Journey", "Skills", "Projects", "Lense", "Contact"];
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);

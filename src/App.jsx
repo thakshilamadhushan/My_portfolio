@@ -14,13 +14,13 @@ function App() {
   return (
     <>
       <Navbar />
-      <section id="home" style={{ height: "100vh" }}><Home/></section>
-      <section id="about me" style={{ height: "100vh" }}><About/></section>
-      <section id="journey" style={{ height: "100vh" }}><Journey/></section>
-      <section id="skills" style={{ height: "100vh" }}><Skills/></section>
-      <section id="projects" style={{ height: "100vh" }}><Projects/></section>
-      <section id="lense" style={{ height: "100vh" }}><Lense/></section>
-      <section id="contact" style={{ height: "100vh" }}><Contact/></section>
+      <section id="home" style={{scrollMarginTop: "80px", minHeight: "100vh" }}><Home/></section>
+      <section id="about" style={{scrollMarginTop: "80px", minHeight: "100vh" }}><About/></section>
+      <section id="journey" style={{scrollMarginTop: "80px", minHeight: "100vh" }}><Journey/></section>
+      <section id="skills" style={{scrollMarginTop: "80px", minHeight: "100vh" }}><Skills/></section>
+      <section id="projects" style={{scrollMarginTop: "80px", minHeight: "100vh" }}><Projects/></section>
+      <section id="lense" style={{scrollMarginTop: "80px", minHeight: "100vh" }}><Lense/></section>
+      <section id="contact" style={{scrollMarginTop: "80px", minHeight: "100vh" }}><Contact/></section>
     </>
   )
 }
