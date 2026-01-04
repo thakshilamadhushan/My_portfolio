@@ -109,7 +109,7 @@ export default function home(){
                     transition: "all 0.8s ease", // smooth fade + slide
                     }}
                 >
-                    Full-Stack Developer | Web Developer | Software • Electronics • IoT | Nature Photographer
+                    Full-Stack Developer | Web Developer | Electronics & IOT Enthusiast | Nature Photographer
                 </Typography>
 
                 {/* Button */}
