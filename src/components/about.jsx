@@ -58,7 +58,7 @@ export default function about(){
                                 textAlign: "center",
                                 p: 2,
                                 borderRadius: "16px",
-                                background: "rgba(255,255,255,0.05)",
+                                background: "rgba(255, 255, 255, 0.07)",
                                 border: "1px solid rgba(255,255,255,0.1)",
                                 animation: `${float} 3s ease-in-out infinite`,
                                 cursor: "default",
