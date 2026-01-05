@@ -1,10 +1,11 @@
-import {Box} from "@mui/material";
+import {Box, Typography} from "@mui/material";
 
 export default function skills(){
     return(
         <Box>
-
-        <div><h3>Skills</h3></div>
+            <Typography variant="h4" fontWeight="bold" textAlign="center" my={6}>
+                Skills
+            </Typography>
 
 
 

@@ -19,9 +19,9 @@ const skills = [
 export default function about(){
     return(
         <>
-        <Box>
-            <h3>About me</h3>
-        </Box>
+            <Typography variant="h4" fontWeight="bold" textAlign="center" my={6}>
+                About me
+            </Typography>
         <Box display={"flex"} justifyContent={"center"} alignContent={"center"} alignItems={"center"} gap={{md:20}}>
             <Box
                 component="img"
