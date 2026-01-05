@@ -139,7 +139,7 @@ export default function home(){
                 >
                     Download CV
                 </Button>
-                <Box mt={3} >
+                <Box mt={3} display={"flex"}>
                     <Link href="https://linkedin.com/in/thakshila-madhushan-834457336" target="_blank" rel="noopener">
                         <IconButton
                             sx={{
