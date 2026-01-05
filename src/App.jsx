@@ -14,8 +14,8 @@ function App() {
   return (
     <>
       <Navbar />
-      <section id="home" style={{scrollMarginTop: "80px", minHeight: "100vh" }}><Home/></section>
-      <section id="about" style={{scrollMarginTop: "80px", minHeight: "100vh" }}><About/></section>
+      <section id="home" style={{scrollMarginTop: "80px", minHeight: "87vh" }}><Home/></section>
+      <section id="about" style={{scrollMarginTop: "80px", minHeight: "87vh" }}><About/></section>
       <section id="journey" style={{scrollMarginTop: "80px", minHeight: "100vh" }}><Journey/></section>
       <section id="skills" style={{scrollMarginTop: "80px", minHeight: "100vh" }}><Skills/></section>
       <section id="projects" style={{scrollMarginTop: "80px", minHeight: "100vh" }}><Projects/></section>

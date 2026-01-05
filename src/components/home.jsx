@@ -1,7 +1,10 @@
-import {Box, Button, Typography} from "@mui/material";
+import {Box, Button, Typography, IconButton, Link} from "@mui/material";
 import BackgroundVideo from "./backgroundVideo";
 import Profile from "../assets/Profile_Image.png";
 import { useEffect, useRef, useState } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebook, faLinkedin, faGithub, faInstagram, faYoutube, faXTwitter } from '@fortawesome/free-brands-svg-icons';
+
 
 function useInView(options = { threshold: 0.5 }) {
   const ref = useRef(null);
@@ -62,7 +65,7 @@ export default function home(){
     return(
         <>
         <BackgroundVideo/>
-        <Box >
+        <Box alignItems={"center"}>
 
         <Box display={"flex"} flexDirection={{xs:"column-reverse", md: "row"}} alignContent={"center"} justifyContent={"center"} alignItems={"center"} gap={{md:20}}>
             
@@ -136,6 +139,97 @@ export default function home(){
                 >
                     Download CV
                 </Button>
+                <Box mt={3} >
+                    <Link href="https://linkedin.com/in/thakshila-madhushan-834457336" target="_blank" rel="noopener">
+                        <IconButton
+                            sx={{
+                            color: "#ffffffff",          
+                            "&:hover": {
+                                color: "#0055d4ff",      
+                                transform: "scale(1.2)",
+                            },
+                            transition: "0.3s",
+                            }}
+                        >
+                            <FontAwesomeIcon icon={faLinkedin} size="1x" />
+                        </IconButton>
+                    </Link>
+
+                    <Link href="https://github.com/thakshilamadhushan" target="_blank" rel="noopener">
+                        <IconButton
+                            sx={{
+                            color: "#ffffffff",          
+                            "&:hover": {
+                                color: "#0055d4ff",      
+                                transform: "scale(1.2)",
+                            },
+                            transition: "0.3s",
+                            }}
+                        >
+                            <FontAwesomeIcon icon={faGithub} size="1x" />
+                        </IconButton>
+                    </Link>
+
+                    <Link href="https://x.com/thakshila000" target="_blank" rel="noopener">
+                        <IconButton
+                            sx={{
+                            color: "#ffffffff",          
+                            "&:hover": {
+                                color: "#0055d4ff",      
+                                transform: "scale(1.2)",
+                            },
+                            transition: "0.3s",
+                            }}
+                        >
+                            <FontAwesomeIcon icon={faXTwitter} size="1x" />
+                        </IconButton>
+                    </Link>
+
+                    <Link href="https://youtube.com/@codeandcurrentelectronics" target="_blank" rel="noopener">
+                        <IconButton
+                            sx={{
+                            color: "#ffffffff",          
+                            "&:hover": {
+                                color: "#0055d4ff",      
+                                transform: "scale(1.2)",
+                            },
+                            transition: "0.3s",
+                            }}
+                        >
+                            <FontAwesomeIcon icon={faYoutube} size="1x" />
+                        </IconButton>
+                    </Link>
+
+                    <Link href="https://facebook.com/thakshila.madushan.73/" target="_blank" rel="noopener">
+                        <IconButton
+                            sx={{
+                            color: "#ffffffff",          
+                            "&:hover": {
+                                color: "#0055d4ff",      
+                                transform: "scale(1.2)",
+                            },
+                            transition: "0.3s",
+                            }}
+                        >
+                            <FontAwesomeIcon icon={faFacebook} size="1x" />
+                        </IconButton>
+                    </Link>
+
+                    <Link href="https://instagram.com/_thakshila_madushan_/" target="_blank" rel="noopener">
+                        <IconButton
+                            sx={{
+                            color: "#ffffffff",          
+                            "&:hover": {
+                                color: "#0055d4ff",      
+                                transform: "scale(1.2)",
+                            },
+                            transition: "0.3s",
+                            }}
+                        >
+                            <FontAwesomeIcon icon={faInstagram} size="1x" />
+                        </IconButton>
+                    </Link>
+                </Box>
             </Box>
             <Box
                 component="img"
@@ -154,7 +248,7 @@ export default function home(){
                 }}
                 />
             
-        </Box>
+          </Box>
         </Box>
         </>
     );
