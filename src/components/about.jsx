@@ -45,7 +45,7 @@ export default function about(){
             <Box>
                 <Box textAlign={"justify"}>
                     <p>I’m a passionate <span style={{fontWeight:700, color:"#38bdf8"}}>Full-Stack and Web Developer</span> who enjoys building modern, responsive, and user-friendly web applications. I focus on creating clean UI, efficient backend systems, and scalable solutions using modern web technologies.
-                        Beyond web development, I have a strong interest in electronics and <span style={{fontWeight:700, color:"#38bdf8"}}>IoT</span>, where I enjoy working with <span style={{fontWeight:700, color:"#38bdf8"}}>ESP32 and Arduino</span> to build smart, connected systems that interact with real-world data.
+                        Beyond web development, I have a strong interest in <span style={{fontWeight:700, color:"#38bdf8"}}>electronics and IoT</span>, where I enjoy working with <span style={{fontWeight:700, color:"#38bdf8"}}>ESP32 and Arduino</span> to build smart, connected systems that interact with real-world data.
                         When I’m not coding or building circuits, I enjoy <span style={{fontWeight:700, color:"#38bdf8"}}>nature photography</span>, capturing landscapes and moments that inspire creativity and attention to detail—skills that also influence my design and development work.</p>
                 </Box>
                 <Box>
