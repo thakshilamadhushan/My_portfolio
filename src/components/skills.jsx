@@ -1,14 +1,6 @@
 import {Box, Typography, Grid, Card} from "@mui/material";
 import { styled } from "@mui/system";
 
-import Word from "../assets/skills/Word.png";
-import Excel from "../assets/skills/Excel.png";
-import PowerPoint from "../assets/skills/PowerPoint.png";
-import Visio from "../assets/skills/Visio.png";
-import Photoshop from "../assets/skills/Photoshop.png";
-import Illustrator from "../assets/skills/Illustrator.png";
-import PremierePro from "../assets/skills/PremierPro.png";
-import Figma from "../assets/skills/Figma.png";
 import Python from "../assets/skills/Python.png";
 import Html from "../assets/skills/HTML.png";
 import Css from "../assets/skills/CSS.png";
@@ -17,20 +9,28 @@ import Php from "../assets/skills/PHP.png";
 import MySQL from "../assets/skills/MySQL.png";
 import Java from "../assets/skills/Java.png";
 import CLogo from "../assets/skills/C.png";
+import Word from "../assets/skills/Word.png";
+import Excel from "../assets/skills/Excel.png";
+import PowerPoint from "../assets/skills/PowerPoint.png";
+import Visio from "../assets/skills/Visio.png";
+import Photoshop from "../assets/skills/Photoshop.ico";
+import Illustrator from "../assets/skills/Illustrator.ico";
+import PremierePro from "../assets/skills/PremierePro.ico";
+import Figma from "../assets/skills/Figma.ico";
 import Arduino from "../assets/skills/Arduino.png";
+import EasyEDA from "../assets/skills/EasyEDA.png";
+import Proteus from "../assets/skills/Proteus.png";
 import PacketTracer from "../assets/skills/CiscoPacketTracer.png";
 import React from "../assets/skills/React.png";
 import Nodejs from "../assets/skills/NodeJS.png";
+import Firebase from "../assets/skills/Firebase.png";
+import Angular from "../assets/skills/Angular.png";
+import Git from "../assets/skills/Git.png";
+import GitHub from "../assets/skills/GitHub.png";
+import Npm from "../assets/skills/npm.png";
+import VSCode from "../assets/skills/VSCode.png";
 
 const skillLogos = {
-  Word: Word,
-  Excel: Excel,
-  PowerPoint: PowerPoint,
-  Visio: Visio,
-  Photoshop: Photoshop,
-  Illustrator: Illustrator,
-  PremierePro: PremierePro,
-  Figma: Figma,
   Python: Python,
   HTML: Html,
   CSS: Css,
@@ -39,13 +39,33 @@ const skillLogos = {
   MySQL: MySQL,
   Java: Java,
   C: CLogo,
+  Word: Word,
+  Excel: Excel,
+  PowerPoint: PowerPoint,
+  Visio: Visio,
+  Photoshop: Photoshop,
+  Illustrator: Illustrator,
+  PremierePro: PremierePro,
+  Figma: Figma,
   Arduino: Arduino,
+  EasyEDA : EasyEDA,
+  Proteus : Proteus,
   PacketTracer: PacketTracer,
   React: React,
   Nodejs: Nodejs,
+  Firebase: Firebase,
+  Angular : Angular,
+  Git: Git,
+  GitHub: GitHub,
+  NPM: Npm,
+  VSCode: VSCode,
 };
 
 const skillsData = [
+  {
+    category: "Programming Languages",
+    skills: ["Python", "Java", "C", "HTML", "CSS", "JavaScript", "PHP", "MySQL"],
+  },
   {
     category: "Office & Productivity",
     skills: ["Word", "Excel", "PowerPoint", "Visio"],
@@ -55,16 +75,17 @@ const skillsData = [
     skills: ["Photoshop", "Illustrator", "PremierePro", "Figma"],
   },
   {
-    category: "Programming Languages",
-    skills: ["Python", "HTML", "CSS", "JavaScript", "PHP", "MySQL", "Java", "C"],
-  },
-  {
     category: "Hardware & Networking",
-    skills: ["Arduino", "PacketTracer"],
+    skills: ["Arduino", "EasyEDA", "Proteus", "PacketTracer"],
   },
   {
     category: "Web Development / Frameworks",
-    skills: ["React", "Nodejs"],
+    skills: ["React", "Angular", "Nodejs", "Firebase"],
+  },
+
+  {
+    category: "Tools & Technologies",
+    skills: ["Git", "GitHub", "NPM", "VSCode"],
   },
 ];
 
@@ -75,9 +96,9 @@ const SkillCard = styled(Card)(({ theme }) => ({
   justifyContent: "center",
   padding: theme.spacing(2),
   margin: theme.spacing(1),
-  width: 50,
-  height: 50,
-  backgroundColor: "rgba(48, 48, 48, 0.5)",
+  width: 60,
+  height: 60,
+  backgroundColor: "rgba(0, 0, 0, 0.5)",
   color: "white",
   boxShadow: "0px 10px 20px rgba(0,0,0,0.2)",
   borderRadius: 16,
@@ -91,6 +112,7 @@ export default function Skills(){
                 Skills
             </Typography>
 
+            <Grid container rowSpacing={2} columnSpacing={{ xs: 1, sm: 2, md: 10 }} justifyContent={"center"}>
             {skillsData.map((category) => (
                 <Box key={category.category} sx={{ mb: 6 }}>
                 <Typography variant="h6" sx={{ mb: 2, color: "white" }}>
@@ -112,6 +134,7 @@ export default function Skills(){
                 </Grid>
                 </Box>
             ))}
+            </Grid>
         </Box>
     );
 }
