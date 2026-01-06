@@ -107,7 +107,7 @@ const SkillCard = styled(Card)(({ theme }) => ({
 
 export default function Skills(){
     return(
-        <Box sx={{ py: 8, px: 4 }}>
+        <Box>
             <Typography variant="h4" fontWeight="bold" textAlign="center" my={6}>
                 Skills
             </Typography>
