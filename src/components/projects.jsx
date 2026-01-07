@@ -55,28 +55,30 @@ export default function Projects(){
     const containerRef = useRef(null);
     const [pause, setPause] = useState(false);
 
+    const loopProjects = [...projects, ...projects];
+
     useEffect(() => {
         const container = containerRef.current;
         if (!container) return;
 
-        const speed = 0.5; // scrolling speed
+        const speed = 0.5;
         let rafId;
 
-        const scroll = () => {
-        if (!pause) {
-            container.scrollLeft += speed;
+        const autoScroll = () => {
+            if (!pause) {
+                container.scrollLeft += speed;
 
-            // loop back when reaching the end
-            if (container.scrollLeft >= container.scrollWidth - container.clientWidth) {
-            container.scrollLeft = 0;
+                // seamless reset
+                if (container.scrollLeft >= container.scrollWidth / 2) {
+                container.scrollLeft = 0;
+                }
             }
-        }
-        rafId = requestAnimationFrame(scroll);
-        };
+            rafId = requestAnimationFrame(autoScroll);
+            };
 
-        scroll();
-        return () => cancelAnimationFrame(rafId);
-    }, [pause]);
+            autoScroll();
+            return () => cancelAnimationFrame(rafId);
+        }, [pause]);
 
     return(
         <Box>
@@ -100,7 +102,7 @@ export default function Projects(){
                     "&::-webkit-scrollbar": { display: "none" }
                 }}
                 >
-                {projects.map((project, index) => (
+                {loopProjects.map((project, index) => (
                     <Card
                         key={index}
                         sx={{
