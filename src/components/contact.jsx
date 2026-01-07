@@ -1,4 +1,5 @@
 import { useState } from "react";
+import emailjs from "emailjs-com";
 import {Box, Typography, TextField, Button, Snackbar, Alert} from "@mui/material";
 
 export default function contact(){
@@ -15,25 +16,36 @@ export default function contact(){
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
-    const handleSubmit = async (e) => {
+    const handleSubmit = (e) => {
         e.preventDefault();
 
-        try {
-            const response = await fetch("http://localhost:8000/send-email", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(formData),
-            });
-
-            const data = await response.json();
-
-            setAlert({ open: true, type: data.success ? "success" : "error", message: data.message });
-            if (data.success) setFormData({ name: "", email: "", message: "" });
-
-        } catch (error) {
-            
-        setAlert({ open: true, type: "error", message: "Failed to send message." });
+        if (!formData.name || !formData.email || !formData.message) {
+        setAlert({ open: true, type: "error", message: "Please fill all fields" });
+        return;
         }
+
+        emailjs
+        .send(
+            import.meta.env.VITE_EMAILJS_SERVICE_ID,  // Replace with your EmailJS service ID
+            import.meta.env.VITE_EMAILJS_TEMPLATE_ID, // Replace with your EmailJS template ID
+            {
+                user_name: formData.name,
+                user_email: formData.email,
+                message: formData.message,
+            },
+            import.meta.env.VITE_EMAILJS_PUBLIC_KEY   // Replace with your EmailJS public key
+        )
+        .then(
+            (result) => {
+            console.log(result.text);
+            setAlert({ open: true, type: "success", message: "Message sent successfully!" });
+            setFormData({ name: "", email: "", message: "" });
+            },
+            (error) => {
+            console.log(error.text);
+            setAlert({ open: true, type: "error", message: "Failed to send message." });
+            }
+        );
     };
 
     return(
@@ -131,7 +143,12 @@ export default function contact(){
             </Box>
 
             {/* Snackbar for alerts */}
-            <Snackbar open={alert.open} autoHideDuration={4000} onClose={() => setAlert({ ...alert, open: false })} anchorOrigin={{ vertical: "bottom", horizontal: "center" }}>
+            <Snackbar
+                open={alert.open}
+                autoHideDuration={4000}
+                onClose={() => setAlert({ ...alert, open: false })}
+                anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
+            >
                 <Alert onClose={() => setAlert({ ...alert, open: false })} severity={alert.type} sx={{ width: "100%" }}>
                 {alert.message}
                 </Alert>
