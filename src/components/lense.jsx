@@ -207,7 +207,10 @@ export default function Lense(){
         }, [pause]);
 
     return(
-        <Box>
+        <Box
+            sx={{
+                justifyContent: "center",
+            }}>
             <Typography variant="h4" fontWeight="bold" textAlign="center" mt={6} mb={3}>
                 Nature Gallery
             </Typography>

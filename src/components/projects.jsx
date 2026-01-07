@@ -81,7 +81,10 @@ export default function Projects(){
         }, [pause]);
 
     return(
-        <Box>
+        <Box
+            sx={{
+                justifyContent: "center",
+            }}>
             <Typography variant="h4" fontWeight="bold" textAlign="center" mt={6} mb={3}>
                 Projects
             </Typography>
