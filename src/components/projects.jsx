@@ -91,9 +91,11 @@ export default function Projects(){
                 onTouchStart={() => setPause(true)}
                 onTouchEnd={() => setPause(false)}
                 sx={{
+                    width: {xs:310, sm: 750, md:"auto"},
                     display: "flex",
                     overflowX: "auto",
                     scrollBehavior: "smooth",
+                    scrollSnapType: "x mandatory",
                     py: 2,
                     "&::-webkit-scrollbar": { display: "none" }
                 }}
@@ -102,9 +104,9 @@ export default function Projects(){
                     <Card
                         key={index}
                         sx={{
-                            flex: { xs: "0 0 90%", sm: "0 0 300px" },
-                            minWidth: 300,
-                            maxWidth: 300,
+                            flex: "0 0 auto",
+                            minWidth: {xs:290, sm:300 ,md:300},
+                            maxWidth: {xs:290, sm:300 ,md:300},
                             mx: 1.5,
                             borderRadius: 3,
                             background: "rgba(0, 5, 49, 0.6)",
