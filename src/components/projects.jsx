@@ -55,7 +55,7 @@ export default function Projects(){
     const containerRef = useRef(null);
     const [pause, setPause] = useState(false);
 
-    const loopProjects = [...projects, ...projects];
+    const loopProjects = [...projects, ...projects, ...projects];
 
     useEffect(() => {
         const container = containerRef.current;
@@ -113,7 +113,7 @@ export default function Projects(){
                             borderRadius: 3,
                             background: "rgba(0, 5, 49, 0.6)",
                             color: "#fff",
-                            boxShadow: "0 5px 5px rgba(0,0,0,0.4)",
+                            boxShadow: "0 5px 5px rgba(0,194,255,0.4)",
                             display: "flex",
                             flexDirection: "column",
                             height: 520, 
